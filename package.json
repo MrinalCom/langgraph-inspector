@@ -1,0 +1,72 @@
+{
+  "name": "langgraph-inspector",
+  "version": "0.1.0",
+  "description": "Live terminal debugger and offline ASCII graph renderer for LangGraph.js — no LangSmith account, no network calls.",
+  "keywords": [
+    "langgraph",
+    "langchain",
+    "langgraphjs",
+    "agent",
+    "debugger",
+    "devtools",
+    "ai",
+    "llm",
+    "state-graph",
+    "visualization"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "langgraph-inspector": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "author": "Mrinal Anand",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrinalCom/langgraph-inspector.git"
+  },
+  "homepage": "https://github.com/MrinalCom/langgraph-inspector#readme",
+  "bugs": {
+    "url": "https://github.com/MrinalCom/langgraph-inspector/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@langchain/langgraph": ">=0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@langchain/langgraph": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@langchain/langgraph": "^0.2.0",
+    "@types/node": "^22.10.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
