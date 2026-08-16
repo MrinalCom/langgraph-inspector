@@ -1,6 +1,6 @@
 {
   "name": "langgraph-inspector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Live terminal debugger and offline ASCII graph renderer for LangGraph.js — no LangSmith account, no network calls.",
   "keywords": [
     "langgraph",
