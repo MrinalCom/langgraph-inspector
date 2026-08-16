@@ -26,7 +26,7 @@
     }
   },
   "bin": {
-    "langgraph-inspector": "./dist/cli.js"
+    "langgraph-inspector": "dist/cli.js"
   },
   "files": [
     "dist"
