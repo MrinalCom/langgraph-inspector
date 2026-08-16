@@ -4,6 +4,8 @@ Live terminal debugger and offline ASCII graph renderer for [LangGraph.js](https
 
 No LangSmith account. No network call. Just `npm install` and see what your agent is doing, in your terminal.
 
+![langgraph-inspector demo: an ASCII diagram of a compiled LangGraph.js graph, followed by live per-node timing and state diffs as it runs](https://raw.githubusercontent.com/MrinalCom/langgraph-inspector/main/demo.gif)
+
 ## Why
 
 LangGraph.js ships `getGraph().drawMermaidPng()`, but that calls out to the `mermaid.ink` API over the network to render — it doesn't work offline or in a locked-down CI runner, and it only gives you the static structure, not what happened during a run. The supported way to see live execution is [LangSmith](https://smith.langchain.com), a hosted product that needs an account and API key.
